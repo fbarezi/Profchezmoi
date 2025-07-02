@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profchezmoi - Cours à domicile Bamako</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004aad;
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    form button {
+      margin-top: 15px;
+      background: #004aad;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #003080;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Profchezmoi</h1>
+    <p>Cours particuliers à domicile à Bamako</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Présentation de l'enseignant</h2>
+      <p><strong>Nom :</strong> Anenou Ayité François</p>
+      <p>Professeur particulier expérimenté, disponible pour des cours physiques à domicile sur Bamako. Je propose un accompagnement personnalisé pour aider votre enfant à réussir.</p>
+    </section>
+
+    <section>
+      <h2>Tarifs</h2>
+      <ul>
+        <li>Cours individuel : 10 000 FCFA / heure</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Moyens de paiement</h2>
+      <ul>
+        <li>Orange Money</li>
+        <li>Mobicash</li>
+        <li>Wave</li>
+      </ul>
+      <p><strong>Numéro à contacter :</strong> +223 72 51 41 42</p>
+    </section>
+
+    <section>
+      <h2>Contactez-nous</h2>
+      <form id="contactForm" onsubmit="return sendMessage(event)">
+        <label for="name">Votre nom</label>
+        <input type="text" id="name" required />
+
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+      <p id="formMessage" style="color: green; display: none; margin-top:10px;"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Profchezmoi - Tous droits réservés
+  </footer>
+
+  <script>
+    function sendMessage(e) {
+      e.preventDefault();
+      // Juste un message de confirmation, pas de serveur ici
+      document.getElementById('formMessage').textContent = "Merci pour votre message, nous vous contacterons bientôt.";
+      document.getElementById('contactForm').reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
