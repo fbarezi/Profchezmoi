@@ -1,144 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Profchezmoi - Cours à domicile Bamako</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profchezmoi - Cours à domicile à Bamako</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
-    header {
-      background: #004aad;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #004aad;
-      margin-top: 0;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 10px;
-      font-size: 1.1em;
-    }
-    form label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
-    form button {
-      margin-top: 15px;
-      background: #004aad;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1em;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background: #003080;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-      color: #777;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f5f7fa; color: #333; }
+    header { background-color: #0066cc; color: white; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    header p { font-size: 1.2em; margin-top: 5px; }
+    .lang-switch { text-align: right; padding: 10px 20px; }
+    .lang-switch button { padding: 5px 10px; margin-left: 5px; background-color: #eee; border: 1px solid #ccc; cursor: pointer; }
+    main { max-width: 1000px; margin: auto; padding: 20px; }
+    section { background: white; margin-bottom: 30px; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+    h2 { color: #0066cc; margin-top: 0; }
+    form label { display: block; margin-top: 15px; }
+    form input, form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 5px; font-size: 1em; }
+    form button { background-color: #0066cc; color: white; padding: 12px 25px; border: none; border-radius: 5px; margin-top: 15px; cursor: pointer; font-size: 1em; }
+    form button:hover { background-color: #0052a3; }
+    footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
+    #whatsapp-button { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; text-align: center; line-height: 50px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
   </style>
 </head>
 <body>
+  <div class="lang-switch">
+    <button onclick="switchLang('fr')">FR</button>
+    <button onclick="switchLang('en')">EN</button>
+  </div>
   <header>
     <h1>Profchezmoi</h1>
-    <p>Cours particuliers à domicile à Bamako</p>
+    <p id="subtitle">Cours particuliers à domicile à Bamako</p>
   </header>
-
   <main>
     <section>
-      <h2>Présentation de l'enseignant</h2>
+      <h2 id="who">Qui suis-je ?</h2>
       <p><strong>Nom :</strong> Anenou Ayité François</p>
-      <p>Professeur particulier expérimenté, disponible pour des cours physiques à domicile sur Bamako. Je propose un accompagnement personnalisé pour aider votre enfant à réussir.</p>
+      <p id="desc">Je suis enseignant à domicile à Bamako, disponible pour accompagner vos enfants dans toutes les matières, avec attention et rigueur.</p>
     </section>
 
     <section>
-      <h2>Tarifs</h2>
-      <ul>
-        <li>Cours individuel : 10 000 FCFA / heure</li>
-      </ul>
+      <h2 id="pricing">Tarifs</h2>
+      <ul><li>10 000 FCFA / heure</li></ul>
     </section>
 
     <section>
-      <h2>Moyens de paiement</h2>
-      <ul>
-        <li>Orange Money</li>
-        <li>Mobicash</li>
-        <li>Wave</li>
-      </ul>
-      <p><strong>Numéro à contacter :</strong> +223 72 51 41 42</p>
+      <h2 id="payment">Moyens de paiement</h2>
+      <ul><li>Orange Money</li><li>Mobicash</li><li>Wave</li></ul>
+      <p><strong>Contact :</strong> +223 72 51 41 42</p>
+      <p><strong>Email :</strong> frankanenou@gmail.com</p>
     </section>
 
     <section>
-      <h2>Contactez-nous</h2>
-      <form id="contactForm" onsubmit="return sendMessage(event)">
-        <label for="name">Votre nom</label>
-        <input type="text" id="name" required />
-
-        <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" rows="4" required></textarea>
-
+      <h2 id="reserve">Réserver un cours</h2>
+      <form action="https://formsubmit.co/frankanenou@gmail.com" method="POST">
+        <label>Nom de l’enfant</label><input type="text" name="Nom de l'enfant" required>
+        <label>Âge</label><input type="number" name="Âge" required>
+        <label>Classe</label><input type="text" name="Classe" required>
+        <label>Jour préféré</label><input type="text" name="Jour préféré" required>
+        <label>Heure souhaitée</label><input type="text" name="Heure souhaitée" required>
         <button type="submit">Envoyer</button>
       </form>
-      <p id="formMessage" style="color: green; display: none; margin-top:10px;"></p>
     </section>
   </main>
-
-  <footer>
-    &copy; 2025 Profchezmoi - Tous droits réservés
-  </footer>
-
+  <footer>&copy; 2025 Profchezmoi. Tous droits réservés.</footer>
+  <a id="whatsapp-button" href="https://wa.me/22372514142" target="_blank">💬</a>
   <script>
-    function sendMessage(e) {
-      e.preventDefault();
-      // Juste un message de confirmation, pas de serveur ici
-      document.getElementById('formMessage').textContent = "Merci pour votre message, nous vous contacterons bientôt.";
-      document.getElementById('contactForm').reset();
-      return false;
+    function switchLang(lang) {
+      if(lang === "en") {
+        document.getElementById("subtitle").innerText = "Private home tutoring in Bamako";
+        document.getElementById("who").innerText = "Who am I?";
+        document.getElementById("desc").innerText = "I am a home tutor in Bamako, available to help your children in all subjects, with care and discipline.";
+        document.getElementById("pricing").innerText = "Pricing";
+        document.getElementById("payment").innerText = "Payment methods";
+        document.getElementById("reserve").innerText = "Book a session";
+      } else {
+        document.getElementById("subtitle").innerText = "Cours particuliers à domicile à Bamako";
+        document.getElementById("who").innerText = "Qui suis-je ?";
+        document.getElementById("desc").innerText = "Je suis enseignant à domicile à Bamako, disponible pour accompagner vos enfants dans toutes les matières, avec attention et rigueur.";
+        document.getElementById("pricing").innerText = "Tarifs";
+        document.getElementById("payment").innerText = "Moyens de paiement";
+        document.getElementById("reserve").innerText = "Réserver un cours";
+      }
     }
   </script>
 </body>
